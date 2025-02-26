@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfect Steak Recipe</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #222;
+            color: white;
+            text-align: center;
+        }
+
+        header {
+            background: url('https://source.unsplash.com/1600x900/?steak') center/cover no-repeat;
+            padding: 80px 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
+
+        .recipe {
+            padding: 20px;
+        }
+
+        ul, ol {
+            text-align: left;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        button {
+            background: #ff4500;
+            border: none;
+            padding: 10px 20px;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: #e63900;
+        }
+
+        footer {
+            padding: 10px;
+            background: #111;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>The Perfect Steak Recipe</h1>
+        <p>Juicy. Tender. Flavorful.</p>
+    </header>
+
+    <section class="recipe">
+        <h2>Ingredients</h2>
+        <ul>
+            <li>1 Ribeye steak (1-1.5 inches thick)</li>
+            <li>Salt & black pepper</li>
+            <li>2 tbsp butter</li>
+            <li>2 cloves garlic (crushed)</li>
+            <li>Fresh rosemary & thyme</li>
+            <li>1 tbsp olive oil</li>
+        </ul>
+
+        <h2>Instructions</h2>
+        <ol>
+            <li>Let steak rest at room temperature for 30 minutes.</li>
+            <li>Season generously with salt and pepper.</li>
+            <li>Heat olive oil in a pan over high heat.</li>
+            <li>Sear the steak for 2-3 minutes per side.</li>
+            <li>Add butter, garlic, and herbs. Baste for 1-2 minutes.</li>
+            <li>Remove and let it rest for 5 minutes before slicing.</li>
+        </ol>
+
+        <button id="funFactBtn">Fun Steak Fact</button>
+        <p id="funFact"></p>
+    </section>
+
+    <footer>
+        <p>© 2025 Steak Lovers</p>
+    </footer>
+
+    <script>
+        document.getElementById("funFactBtn").addEventListener("click", function() {
+            const facts = [
+                "The world's most expensive steak costs over $3,200!",
+                "Japan's Wagyu beef is known for its intense marbling and buttery texture.",
+                "Reverse searing helps achieve a perfect medium-rare finish.",
+                "Aged beef can develop deeper flavors, similar to fine wine."
+            ];
+            document.getElementById("funFact").innerText = facts[Math.floor(Math.random() * facts.length)];
+        });
+    </script>
+</body>
+</html>
